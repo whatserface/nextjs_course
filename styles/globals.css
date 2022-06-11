@@ -2,10 +2,11 @@ html,
 body {
 	margin: 0;
 	padding: 0;
+
 	color: var(--black);
 	background: #F5F6F8;
 
-	font-family: 'Noto Sans', sans-serif;
+	font-family: 'Noto Sans KR', sans-serif;
 }
 
 a {
@@ -23,9 +24,9 @@ a {
 	--gray-light: #EBEBEB;
 	--white: white;
 	--primary: #7653FC;
-	--primary-hover: #6648dc;
+	--primary-hover: #6344df;
 	--red: #FC836D;
 	--green: #1DC37E;
 	--green-light: #C8F8E4;
-	--font-family: 'Noto Sans', sans-serif;
+	--font-family: 'Noto Sans KR', sans-serif;
 }
