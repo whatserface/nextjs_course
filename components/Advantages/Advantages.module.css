@@ -5,33 +5,22 @@
 
 .advantage {
 	display: grid;
-	align-items: center;
 	grid-template-columns: 50px 1fr;
-	grid-template-areas:
-		"icon title"
-		"description description";
 	gap: 20px 40px;
+	margin-bottom: 30px;
 }
 
 .description {
-	grid-area: description;
 	box-sizing: content-box;
-	border-left: 1px solid #D2D2D2;
-	padding-left: 65px;
-	margin-left: 25px;
 }
 
 .title {
-	grid-area: title;
+	align-self: center;
 	font-weight: 700;
 	font-size: 20px;
 	line-height: 27px;
 }
 
-.icon {
-	grid-area: icon;
-}
-
-.skills {
-	margin-bottom: 50px;
+.vline {
+	border-left: 1px solid var(--gray-light);
 }
