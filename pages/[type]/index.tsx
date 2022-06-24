@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next/types';
+import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next';
 import { ParsedUrlQuery } from 'querystring';
 import { firstLevelMenu } from '../../helpers/helpers';
 import { MenuItem } from '../../interfaces/menu.interface';

@@ -1,4 +1,4 @@
-import { GetStaticProps } from 'next/types';
+import { GetStaticProps } from 'next';
 import React from 'react';
 import { withLayout } from '../layout/Layout';
 import axios from "axios";

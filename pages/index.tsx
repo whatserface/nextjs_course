@@ -1,4 +1,4 @@
-import { GetStaticProps } from 'next/types';
+import { GetStaticProps } from 'next';
 import React, { useState } from 'react';
 import { Button, Htag, Input, P, Rating, Tag, Textarea } from '../components';
 import { withLayout } from '../layout/Layout';
