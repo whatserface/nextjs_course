@@ -9,7 +9,7 @@ import { Review } from '../Review/Review';
 import { declOfNum, priceRu } from '../../helpers/helpers';
 import { Divider } from '../Divider/Divider';
 import Image from 'next/image';
-import { Fragment, useState } from 'react';
+import { useState } from 'react';
 import { ReviewForm } from '../ReviewForm/ReviewForm';
 
 export const Product = ({ product, className, ...props }: ProductProps): JSX.Element => {
@@ -78,12 +78,12 @@ export const Product = ({ product, className, ...props }: ProductProps): JSX.Ele
 				[styles.closed]: !isReviewOpened,
 			})}>
 				{product.reviews.map(r => (
-					<Fragment key={r._id}>
+					<div key={r._id}>
 						<Review review={r} />
 						<Divider />
-						<ReviewForm productId={product._id} />
-					</Fragment>
+					</div>
 				))}
+				<ReviewForm productId={product._id} />
 			</Card>
 		</>
 	);

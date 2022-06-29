@@ -9,3 +9,17 @@
 .editable {
 	cursor: pointer;
 }
+
+.error {
+	width: fit-content;
+	border: 1px solid var(--red);
+	position: relative;
+}
+
+.errorMessage {
+	position: absolute;
+	bottom: -20px;
+	left: -15px;
+	color: var(--red);
+	white-space: nowrap;
+}
