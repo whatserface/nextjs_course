@@ -10,16 +10,18 @@
 	cursor: pointer;
 }
 
-.error {
-	width: fit-content;
-	border: 1px solid var(--red);
+.ratingWrapper {
 	position: relative;
 }
 
 .errorMessage {
 	position: absolute;
 	bottom: -20px;
-	left: -15px;
+	left: 0;
 	color: var(--red);
 	white-space: nowrap;
+}
+
+.error svg {
+	stroke: var(--red);
 }

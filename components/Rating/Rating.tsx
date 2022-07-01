@@ -58,7 +58,9 @@ const Rating = forwardRef(({ isEditable = false, rating, setRating, error, ...pr
 	};
 
 	return (
-		<div className={cn({ [styles.error]: error })} {...props}>
+		<div {...props} ref={ref} className={cn(styles.ratingWrapper, {
+			[styles.error]: error
+		})}>
 			{ratingArray.map((r, i) => (<span key={i}>{r}</span>))}
 			{error && <span className={styles.errorMessage}>{error.message}</span>}
 		</div>
