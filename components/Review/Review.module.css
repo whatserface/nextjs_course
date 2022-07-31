@@ -18,7 +18,7 @@
 }
 
 .name {
-	font-weight: 700;
+	font-weight: bold;
 }
 
 @media screen and (max-width: 640px) {

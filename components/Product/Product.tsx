@@ -11,25 +11,15 @@ import { Divider } from '../Divider/Divider';
 import Image from 'next/image';
 import { ForwardedRef, forwardRef, useRef, useState } from 'react';
 import { ReviewForm } from '../ReviewForm/ReviewForm';
-import { motion, useAnimation } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 export const Product = motion(forwardRef(function Product({ product, className, ...props }: ProductProps, ref: ForwardedRef<HTMLDivElement>): JSX.Element {
 	const [isReviewOpened, setIsReviewOpened] = useState<boolean>(false);
 	const reviewRef = useRef<HTMLDivElement>(null);
 
 	const variants = {
-		visible: {
-			innerHeight: 0,
-			transition: {
-				innerHeight: 'auto',
-			}
-		},
-		hidden: {
-			innerHeight: 'auto',
-			transition: {
-				innerHeight: 0
-			}
-		}
+		visible: { opacity: 1, height: 'auto' },
+		hidden: { opacity: 0, height: 0 }
 	};
 
 	const scrollToReview = () => {
@@ -39,8 +29,6 @@ export const Product = motion(forwardRef(function Product({ product, className, 
 			block: 'start'
 		});
 	};
-
-
 
 	return (
 		<div className={className} {...props} ref={ref}>
@@ -101,15 +89,11 @@ export const Product = motion(forwardRef(function Product({ product, className, 
 				</div>
 			</Card>
 			<motion.div
-				layout
 				variants={variants}
-				initial={isReviewOpened ? 'visible' : 'hidden'}
+				initial={'hidden'}
 				animate={isReviewOpened ? 'visible' : 'hidden'}
 			>
-				<Card color='blue' className={cn(styles.reviews, {
-					[styles.opened]: isReviewOpened,
-					[styles.closed]: !isReviewOpened,
-				})} ref={reviewRef}>
+				<Card color='blue' className={styles.reviews} ref={reviewRef}>
 					{product.reviews.map(r => (
 						<div key={r._id}>
 							<Review review={r} />
